@@ -1,0 +1,114 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "6a1dff61c58e4c40b89c",
+  "position": {
+    "x": 1295.0077314557655,
+    "y": 885.47537193556616,
+    "z": 8000,
+    "height": 169.71611295431686,
+    "width": 605.07483748930349,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_ITEMS"
+                    }
+                  },
+                  "Property": "SPS_CUSTOMER_ITEM_KEY"
+                }
+              },
+              "queryRef": "DIM_ITEMS.SPS_CUSTOMER_ITEM_KEY",
+              "nativeQueryRef": "Customer key",
+              "displayName": "Customer key"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_ITEMS"
+                    }
+                  },
+                  "Property": "CATEGORY_NAME"
+                }
+              },
+              "queryRef": "DIM_ITEMS.CATEGORY_NAME",
+              "nativeQueryRef": "Category",
+              "displayName": "Category"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_ITEMS"
+                    }
+                  },
+                  "Property": "COST"
+                }
+              },
+              "queryRef": "Sum(DIM_ITEMS.COST)",
+              "nativeQueryRef": "Cost",
+              "displayName": "Cost"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_calculations"
+                    }
+                  },
+                  "Property": "Total Inventory at Cost"
+                }
+              },
+              "queryRef": "_calculations.Total Inventory at Cost",
+              "nativeQueryRef": "Total Inventory at Cost"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_calculations"
+                    }
+                  },
+                  "Property": "Total Inventory at Retail"
+                }
+              },
+              "queryRef": "_calculations.Total Inventory at Retail",
+              "nativeQueryRef": "Total Inventory at Retail"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_calculations"
+                  }
+                },
+                "Property": "Total Inventory at Cost"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,70 @@
+version: 2
+
+models:
+  # ── dimensions ─────────────────────────────────────────────────
+  - name: dim_dates
+    description: "Calendar dimension covering 2024."
+    columns:
+      - name: date_day
+        tests: [unique, not_null]
+
+  - name: dim_items
+    description: "Item dimension at sps_item_mapping_key grain."
+    columns:
+      - name: sps_item_mapping_key
+        tests: [unique, not_null]
+
+  - name: dim_locations
+    description: "Store dimension at sps_customer_location_key grain."
+    columns:
+      - name: sps_customer_location_key
+        tests: [unique, not_null]
+
+  - name: dim_retailers
+    description: "Retailer dimension (12 rows). Confirms weekly reporting grain."
+    columns:
+      - name: sps_retailer_name_key
+        tests: [unique, not_null]
+
+  # ── fact ───────────────────────────────────────────────────────
+  - name: fct_retail_activity
+    description: "Weekly retail activity fact — 720 rows across 6 periods."
+    columns:
+      - name: fact_key
+        tests: [unique, not_null]
+      - name: period_ending_date
+        tests: [not_null]
+      - name: sps_item_mapping_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_items')
+                field: sps_item_mapping_key
+      - name: sps_customer_location_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_locations')
+                field: sps_customer_location_key
+      - name: sps_retailer_name_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_retailers')
+                field: sps_retailer_name_key
+      - name: net_sales_units
+        tests: [not_null]
+      - name: net_sales_retail
+        tests: [not_null]
+
+  # ── aggregate ──────────────────────────────────────────────────
+  - name: rpt_weekly_retailer_performance
+    description: "Pre-aggregated weekly performance per retailer."
+    columns:
+      - name: period_ending_date
+        tests: [not_null]
+      - name: sps_retailer_name_key
+        tests: [not_null]

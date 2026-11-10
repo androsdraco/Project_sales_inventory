@@ -1,0 +1,62 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "12e9c8ad624409c6b382",
+  "position": {
+    "x": 9.2025029956064444,
+    "y": 204.29556650246306,
+    "z": 1000,
+    "height": 279.75609106643594,
+    "width": 246.62708028225271,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_RETAILERS"
+                    }
+                  },
+                  "Property": "SPS_RETAILER_NAME_KEY"
+                }
+              },
+              "queryRef": "DIM_RETAILERS.SPS_RETAILER_NAME_KEY",
+              "nativeQueryRef": "SPS_RETAILER_NAME_KEY",
+              "active": true
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Basic'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

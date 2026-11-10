@@ -1,0 +1,242 @@
+table DIM_LOCATIONS
+	lineageTag: 54544470-a712-4d44-8ce8-d5a90e97416b
+
+	column SPS_CUSTOMER_LOCATION_KEY
+		dataType: string
+		lineageTag: a867775d-6b6f-41db-a7e1-aa840e7f62cb
+		summarizeBy: none
+		sourceColumn: SPS_CUSTOMER_LOCATION_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPS_RETAILER_NAME_KEY
+		dataType: string
+		lineageTag: 25a528f0-2a87-48cb-83a7-a1ae4fbfae46
+		summarizeBy: none
+		sourceColumn: SPS_RETAILER_NAME_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column LOCATION_ID
+		dataType: string
+		lineageTag: c3431e07-fd79-4305-ac76-4218be9dbc0d
+		summarizeBy: none
+		sourceColumn: LOCATION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RETAILER_NAME
+		dataType: string
+		lineageTag: 7c628c25-86ec-4e93-acfa-af0efb4beb22
+		summarizeBy: none
+		sourceColumn: RETAILER_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column STORE_NUMBER
+		dataType: string
+		lineageTag: ce06725c-f001-40e5-8312-e3a251948e02
+		summarizeBy: none
+		sourceColumn: STORE_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column STORE_NAME
+		dataType: string
+		lineageTag: f4aa943a-f27c-47f7-a76c-17fea4f4ba14
+		summarizeBy: none
+		sourceColumn: STORE_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column CITY
+		dataType: string
+		lineageTag: 31bfdc04-1443-4096-9bc7-b665c738f3b8
+		summarizeBy: none
+		sourceColumn: CITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATE
+		dataType: string
+		lineageTag: 22cfe921-e2ae-49f2-b87c-d6ba6f5b410c
+		summarizeBy: none
+		sourceColumn: STATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column POSTAL_CODE
+		dataType: string
+		lineageTag: f454acd8-ca22-447c-af0a-e22828d36389
+		summarizeBy: none
+		sourceColumn: POSTAL_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTRY
+		dataType: string
+		lineageTag: 4d0a76fd-96b1-4205-8a2b-8ca9c5709fda
+		summarizeBy: none
+		sourceColumn: COUNTRY
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPS_COUNTRY_CODE
+		dataType: string
+		lineageTag: 370d733c-50c9-4a18-811f-ca1dcd8bba80
+		summarizeBy: none
+		sourceColumn: SPS_COUNTRY_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGION
+		dataType: string
+		lineageTag: d2f8f176-e1a5-44f4-ac52-9c943b949eaa
+		summarizeBy: none
+		sourceColumn: REGION
+
+		annotation SummarizationSetBy = Automatic
+
+	column DEMOGRAPHIC
+		dataType: string
+		lineageTag: ed47a010-48ba-48a2-819f-6d2b4928e3fe
+		summarizeBy: none
+		sourceColumn: DEMOGRAPHIC
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLIMATE
+		dataType: string
+		lineageTag: 6bcf58e9-8cf4-41f6-a360-acc5e16e0656
+		summarizeBy: none
+		sourceColumn: CLIMATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column LOCATION_TYPE
+		dataType: string
+		lineageTag: 2fce19bf-b1ca-4e84-a64e-3716b758e607
+		summarizeBy: none
+		sourceColumn: LOCATION_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column STORE_CLASSIFICATION
+		dataType: string
+		lineageTag: b4f2407d-5646-4eb3-bb9a-d8bdc90e4dfa
+		summarizeBy: none
+		sourceColumn: STORE_CLASSIFICATION
+
+		annotation SummarizationSetBy = Automatic
+
+	column STORE_SIZE
+		dataType: string
+		lineageTag: 33d3e5ae-e812-40fc-bbba-095e4411a4ff
+		summarizeBy: none
+		sourceColumn: STORE_SIZE
+
+		annotation SummarizationSetBy = Automatic
+
+	column COMP_STORE_INDICATOR
+		dataType: string
+		lineageTag: 3ba9a3a3-e4d1-4802-ba3b-5b470c4df48b
+		summarizeBy: none
+		sourceColumn: COMP_STORE_INDICATOR
+
+		annotation SummarizationSetBy = Automatic
+
+	column BANNER
+		dataType: string
+		lineageTag: 6a146394-390c-4f59-ac92-3506e39bbf99
+		summarizeBy: none
+		sourceColumn: BANNER
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPS_LATITUDE
+		dataType: double
+		lineageTag: 444b48ba-6f78-419e-aee9-734866c7cbed
+		summarizeBy: sum
+		sourceColumn: SPS_LATITUDE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SPS_LONGITUDE
+		dataType: double
+		lineageTag: 859d5a53-0d90-4603-8edd-cf92e309c7e0
+		summarizeBy: sum
+		sourceColumn: SPS_LONGITUDE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OPEN_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: bd77dd4d-e7b9-4809-927b-a0d33a569a8f
+		summarizeBy: none
+		sourceColumn: OPEN_DATE
+
+		variation Variation
+			isDefault
+			relationship: 7820a6ef-9d17-4079-8c9b-250803f32f93
+			defaultHierarchy: LocalDateTable_95d1d07a-e81c-4712-91f6-8a58a9e41afb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CLOSE_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 89aeb45f-6f08-47ed-afe5-0e6d97ac09bc
+		summarizeBy: none
+		sourceColumn: CLOSE_DATE
+
+		variation Variation
+			isDefault
+			relationship: 6d028495-5406-4d25-9e03-f3d00c790cb7
+			defaultHierarchy: LocalDateTable_eb6f20bb-cd2c-454e-b327-c58021e0d672.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CURRENCY_CODE
+		dataType: string
+		lineageTag: 51f4e43d-93d6-4323-a15c-e2f2c8bb5346
+		summarizeBy: none
+		sourceColumn: CURRENCY_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column _LOADED_AT
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f86c0f10-4e51-4365-9431-fdcb34461b10
+		summarizeBy: none
+		sourceColumn: _LOADED_AT
+
+		variation Variation
+			isDefault
+			relationship: c9b4c9c5-9098-4e05-8eb5-31c692afa858
+			defaultHierarchy: LocalDateTable_d9b39662-3206-4490-ad07-66e6918fce83.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_LOCATIONS = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("YTIGPIZ-WM74446.snowflakecomputing.com","compute_wh",[Implementation="2.0"]),
+				    DBT_SALES_AND_INVENTORY_Database = Source{[Name="DBT_SALES_AND_INVENTORY",Kind="Database"]}[Data],
+				    PUBLIC_Schema = DBT_SALES_AND_INVENTORY_Database{[Name="PUBLIC",Kind="Schema"]}[Data],
+				    DIM_LOCATIONS_Table = PUBLIC_Schema{[Name="DIM_LOCATIONS",Kind="Table"]}[Data]
+				in
+				    DIM_LOCATIONS_Table
+
+	annotation PBI_ResultType = Table
+

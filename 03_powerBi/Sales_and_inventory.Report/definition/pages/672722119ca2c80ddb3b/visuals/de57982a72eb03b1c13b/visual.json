@@ -1,0 +1,85 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "de57982a72eb03b1c13b",
+  "position": {
+    "x": 9.2025029956064444,
+    "y": 99.3870323525496,
+    "z": 0,
+    "height": 86.503528158700576,
+    "width": 246.62708028225271,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FCT_RETAIL_ACTIVITY"
+                    }
+                  },
+                  "Property": "PERIOD_WEEK_START"
+                }
+              },
+              "queryRef": "FCT_RETAIL_ACTIVITY.PERIOD_WEEK_START",
+              "nativeQueryRef": "PERIOD_WEEK_START",
+              "active": true
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FCT_RETAIL_ACTIVITY"
+                  }
+                },
+                "Property": "PERIOD_WEEK_START"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

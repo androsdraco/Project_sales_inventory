@@ -1,0 +1,233 @@
+table FCT_RETAIL_ACTIVITY
+	lineageTag: 30ac709d-dad7-4515-8b54-bdd1caa221a2
+
+	column FACT_KEY
+		dataType: string
+		lineageTag: 46d895d7-9e50-40ba-8b76-da1b4f1f6676
+		summarizeBy: none
+		sourceColumn: FACT_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column PERIOD_ENDING_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1800fd44-080b-48c6-9ca1-88d03dd2a3d8
+		summarizeBy: none
+		sourceColumn: PERIOD_ENDING_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SPS_ITEM_MAPPING_KEY
+		dataType: string
+		lineageTag: 168b9fd6-36f7-421f-b114-4be3ab74a97b
+		summarizeBy: none
+		sourceColumn: SPS_ITEM_MAPPING_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPS_CUSTOMER_LOCATION_KEY
+		dataType: string
+		lineageTag: 090f6aeb-01d2-4240-a93a-48aa6e911c6c
+		summarizeBy: none
+		sourceColumn: SPS_CUSTOMER_LOCATION_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPS_RETAILER_NAME_KEY
+		dataType: string
+		lineageTag: a58c7653-a5a9-4a3e-b2b8-6c47f862f6de
+		summarizeBy: none
+		sourceColumn: SPS_RETAILER_NAME_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column PERIOD_YEAR
+		dataType: double
+		lineageTag: da513a9d-b0d4-4ff6-88db-babb4e957f60
+		summarizeBy: sum
+		sourceColumn: PERIOD_YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PERIOD_QUARTER
+		dataType: double
+		lineageTag: e11d523f-7a33-4c0b-874f-5aa57cad4461
+		summarizeBy: sum
+		sourceColumn: PERIOD_QUARTER
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PERIOD_MONTH
+		dataType: double
+		lineageTag: 8ef933ff-5c17-4e7c-84c1-86201bc5e1bf
+		summarizeBy: sum
+		sourceColumn: PERIOD_MONTH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PERIOD_WEEK_OF_YEAR
+		dataType: double
+		lineageTag: 7115b729-6e45-4b39-b3ad-99f29a20b80c
+		summarizeBy: sum
+		sourceColumn: PERIOD_WEEK_OF_YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PERIOD_WEEK_START
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0d6e5dda-ecd0-40ad-80ab-f0a09d5f043f
+		summarizeBy: none
+		sourceColumn: PERIOD_WEEK_START
+
+		variation Variation
+			isDefault
+			relationship: b7d72f90-ea6b-4bf5-9491-58069afede9b
+			defaultHierarchy: LocalDateTable_c4b893cb-e634-40ec-9da5-bf97223916fd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column NET_SALES_UNITS
+		dataType: double
+		lineageTag: bba11671-46f6-4b00-a540-9d7ee3fcd134
+		summarizeBy: sum
+		sourceColumn: NET_SALES_UNITS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NET_SALES_RETAIL
+		dataType: double
+		lineageTag: a0a9bbfc-193f-4674-80fd-039c99591715
+		summarizeBy: sum
+		sourceColumn: NET_SALES_RETAIL
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column INVENTORY_UNITS
+		dataType: double
+		lineageTag: 5efa5625-e81d-4301-b091-bd69d88b29c9
+		summarizeBy: sum
+		sourceColumn: INVENTORY_UNITS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column INVENTORY_ADJUSTMENT_UNITS
+		dataType: double
+		lineageTag: 5a86f84f-6e0d-4c26-8afb-9abc561cf31e
+		summarizeBy: sum
+		sourceColumn: INVENTORY_ADJUSTMENT_UNITS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CORPORATE_UNIT_ADJUSTED_COST
+		dataType: double
+		lineageTag: 8a7a9d93-00c9-493c-848e-26540f36a80d
+		summarizeBy: sum
+		sourceColumn: CORPORATE_UNIT_ADJUSTED_COST
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CORPORATE_UNIT_ACQUIRED_COST
+		dataType: double
+		lineageTag: 882bc5d5-89c1-4be3-9fbc-9d9b7f7b684a
+		summarizeBy: sum
+		sourceColumn: CORPORATE_UNIT_ACQUIRED_COST
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CORPORATE_UNIT_OWNED_RETAIL_PRICE
+		dataType: double
+		lineageTag: faf9c605-92ae-4938-8473-a21e11a130ee
+		summarizeBy: sum
+		sourceColumn: CORPORATE_UNIT_OWNED_RETAIL_PRICE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EST_SALES_AT_RETAIL_VALUE
+		dataType: double
+		lineageTag: c783c1b0-8ac3-42b2-9038-6ab19942e84f
+		summarizeBy: sum
+		sourceColumn: EST_SALES_AT_RETAIL_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AVG_UNIT_SELLING_PRICE
+		dataType: double
+		lineageTag: c3857a5f-4723-4d4c-b8b3-1a8fb75a9323
+		summarizeBy: sum
+		sourceColumn: AVG_UNIT_SELLING_PRICE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column _LOADED_AT
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3dbe8ca2-1a59-4304-b673-94e28d122a0c
+		summarizeBy: none
+		sourceColumn: _LOADED_AT
+
+		variation Variation
+			isDefault
+			relationship: 30e3bac3-af4a-456e-9eaa-fe3003320d13
+			defaultHierarchy: LocalDateTable_19bd30b5-4df9-4264-8c7f-f75cf2560fdf.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column _FACT_BUILT_AT
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3382a377-c88c-4dc8-9d3e-d35711d409d0
+		summarizeBy: none
+		sourceColumn: _FACT_BUILT_AT
+
+		variation Variation
+			isDefault
+			relationship: 1a3d30bf-c07a-4f65-9254-6712a3b2c0ee
+			defaultHierarchy: LocalDateTable_9d7f38e2-c520-4178-9f33-68b957134456.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FCT_RETAIL_ACTIVITY = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("YTIGPIZ-WM74446.snowflakecomputing.com","compute_wh",[Implementation="2.0"]),
+				    DBT_SALES_AND_INVENTORY_Database = Source{[Name="DBT_SALES_AND_INVENTORY",Kind="Database"]}[Data],
+				    PUBLIC_Schema = DBT_SALES_AND_INVENTORY_Database{[Name="PUBLIC",Kind="Schema"]}[Data],
+				    FCT_RETAIL_ACTIVITY_Table = PUBLIC_Schema{[Name="FCT_RETAIL_ACTIVITY",Kind="Table"]}[Data]
+				in
+				    FCT_RETAIL_ACTIVITY_Table
+
+	annotation PBI_ResultType = Table
+

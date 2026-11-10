@@ -1,0 +1,55 @@
+table DIM_RETAILERS
+	lineageTag: 8ec06ce7-44a0-4ecc-9819-bcaeb8e95ff1
+
+	column SPS_RETAILER_NAME_KEY
+		dataType: string
+		lineageTag: a5d2566e-3caf-4c89-8726-bb54fcdad6b8
+		summarizeBy: none
+		sourceColumn: SPS_RETAILER_NAME_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVITYGRAIN
+		dataType: string
+		lineageTag: 73e91e49-4708-4d28-81ea-c37da0f2cae2
+		summarizeBy: none
+		sourceColumn: ACTIVITYGRAIN
+
+		annotation SummarizationSetBy = Automatic
+
+	column _LOADED_AT
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a028a2e5-2291-44d8-82a2-7cb318acb59f
+		summarizeBy: none
+		sourceColumn: _LOADED_AT
+
+		variation Variation
+			isDefault
+			relationship: 06e1a265-03af-4e13-a84c-50000d174ffa
+			defaultHierarchy: LocalDateTable_bf42de09-f531-408f-bb97-dd9f5a1be42c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column HAS_REVENUE_DATA
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3b6da2c8-70ce-4b4b-ba54-5fe563fec0cf
+		summarizeBy: none
+		sourceColumn: HAS_REVENUE_DATA
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_RETAILERS = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("YTIGPIZ-WM74446.snowflakecomputing.com","compute_wh",[Implementation="2.0"]),
+				    DBT_SALES_AND_INVENTORY_Database = Source{[Name="DBT_SALES_AND_INVENTORY",Kind="Database"]}[Data],
+				    PUBLIC_Schema = DBT_SALES_AND_INVENTORY_Database{[Name="PUBLIC",Kind="Schema"]}[Data],
+				    DIM_RETAILERS_Table = PUBLIC_Schema{[Name="DIM_RETAILERS",Kind="Table"]}[Data]
+				in
+				    DIM_RETAILERS_Table
+
+	annotation PBI_ResultType = Table
+

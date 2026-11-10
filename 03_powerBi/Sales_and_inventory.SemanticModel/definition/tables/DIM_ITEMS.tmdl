@@ -1,0 +1,298 @@
+table DIM_ITEMS
+	lineageTag: b78d0cec-71ec-444f-86fb-485c40057174
+
+	column SPS_ITEM_MAPPING_KEY
+		dataType: string
+		lineageTag: dceff783-3125-4931-b882-21d6d332a73f
+		summarizeBy: none
+		sourceColumn: SPS_ITEM_MAPPING_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPS_CUSTOMER_ITEM_KEY
+		dataType: string
+		lineageTag: 3a089dfd-2069-43fb-a6a1-c20043973fb3
+		summarizeBy: none
+		sourceColumn: SPS_CUSTOMER_ITEM_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPS_RETAILER_NAME_KEY
+		dataType: string
+		lineageTag: 44bf72fa-6a3d-4f93-88c2-c87282d6c28c
+		summarizeBy: none
+		sourceColumn: SPS_RETAILER_NAME_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCT_ID
+		dataType: string
+		lineageTag: 16e96440-a750-4367-88ec-610821a5625f
+		summarizeBy: none
+		sourceColumn: PRODUCT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCT_TYPE_ID
+		dataType: string
+		lineageTag: 7c057dd9-0326-4f19-996c-da7ca0203892
+		summarizeBy: none
+		sourceColumn: PRODUCT_TYPE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column VENDOR_CODE
+		dataType: string
+		lineageTag: bff2a736-9646-473f-bf1d-53b9ab6d0267
+		summarizeBy: none
+		sourceColumn: VENDOR_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VENDOR_NAME
+		dataType: string
+		lineageTag: f9eae8c1-e5d5-4ea0-a179-34a4fca872e4
+		summarizeBy: none
+		sourceColumn: VENDOR_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column BRAND_CODE
+		dataType: string
+		lineageTag: 65717722-2b2f-43b3-ba62-fd4de7d3b930
+		summarizeBy: none
+		sourceColumn: BRAND_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column BRAND_NAME
+		dataType: string
+		lineageTag: 9b9b5325-06f7-4f9a-b308-9311597b3705
+		summarizeBy: none
+		sourceColumn: BRAND_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column DIVISION_NAME
+		dataType: string
+		lineageTag: 02e0dff9-70cc-4a36-b7d9-8575b6b3097e
+		summarizeBy: none
+		sourceColumn: DIVISION_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column MAJOR_DEPARTMENT_NAME
+		dataType: string
+		lineageTag: ad161a48-72bb-420a-a869-a8c01049cfcf
+		summarizeBy: none
+		sourceColumn: MAJOR_DEPARTMENT_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column DEPARTMENT_NAME
+		dataType: string
+		lineageTag: 13a77991-c418-47ff-b0fb-741db4a2b550
+		summarizeBy: none
+		sourceColumn: DEPARTMENT_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column SUB_DEPARTMENT_NAME
+		dataType: string
+		lineageTag: 5876eebb-e53b-43ea-90c9-bfa9de4bbd47
+		summarizeBy: none
+		sourceColumn: SUB_DEPARTMENT_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column MAJOR_CLASS_NAME
+		dataType: string
+		lineageTag: 734781f4-26eb-43a2-aeda-a59bc3dfc6e8
+		summarizeBy: none
+		sourceColumn: MAJOR_CLASS_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLASS_NAME
+		dataType: string
+		lineageTag: b9decfba-a949-4e8d-81f0-893ae623237a
+		summarizeBy: none
+		sourceColumn: CLASS_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column SUB_CLASS_NAME
+		dataType: string
+		lineageTag: e1db1e33-5422-4e2e-8b70-b03daca8c838
+		summarizeBy: none
+		sourceColumn: SUB_CLASS_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column CATEGORY_NAME
+		dataType: string
+		lineageTag: a73e1879-e9db-49b1-8073-1f2d32281754
+		summarizeBy: none
+		sourceColumn: CATEGORY_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column SUB_CATEGORY_NAME
+		dataType: string
+		lineageTag: 7708bf2d-214f-4291-8c6a-dcb5c5c7fb0f
+		summarizeBy: none
+		sourceColumn: SUB_CATEGORY_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCT_GROUP_NAME
+		dataType: string
+		lineageTag: 5ca5427b-842a-41b9-a314-67255481a17b
+		summarizeBy: none
+		sourceColumn: PRODUCT_GROUP_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column GENDER
+		dataType: string
+		lineageTag: eac78d26-3efb-4a7c-8efb-49be573ac6ee
+		summarizeBy: none
+		sourceColumn: GENDER
+
+		annotation SummarizationSetBy = Automatic
+
+	column COLOR_NAME
+		dataType: string
+		lineageTag: e1c69413-3629-46fb-badd-9ac6fcbe159a
+		summarizeBy: none
+		sourceColumn: COLOR_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column SIZE_NAME
+		dataType: string
+		lineageTag: 5069a7b4-690c-4ccc-99d1-05a11fa442e3
+		summarizeBy: none
+		sourceColumn: SIZE_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column UPC
+		dataType: string
+		lineageTag: 1c840d62-4d0d-4157-8257-4b14d02bda2e
+		summarizeBy: none
+		sourceColumn: UPC
+
+		annotation SummarizationSetBy = Automatic
+
+	column SKU
+		dataType: string
+		lineageTag: 69883ede-1a36-4761-8281-e6215529b80c
+		summarizeBy: none
+		sourceColumn: SKU
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCT_DESCRIPTION
+		dataType: string
+		lineageTag: 14caa2c6-ecd7-4fa1-a49b-0224253ec36e
+		summarizeBy: none
+		sourceColumn: PRODUCT_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column CORPORATE_UNIT_ACQUIRED_COST
+		dataType: string
+		lineageTag: 359c3ffa-0b2e-4b1d-97e1-7313521958e8
+		summarizeBy: none
+		sourceColumn: CORPORATE_UNIT_ACQUIRED_COST
+
+		annotation SummarizationSetBy = Automatic
+
+	column CORPORATE_UNIT_ADJUSTED_COST
+		dataType: string
+		lineageTag: 7778b7bb-2ed9-4dcd-8296-f3258addbea9
+		summarizeBy: none
+		sourceColumn: CORPORATE_UNIT_ADJUSTED_COST
+
+		annotation SummarizationSetBy = Automatic
+
+	column CORPORATE_UNIT_OWNED_RETAIL_PRICE
+		dataType: string
+		lineageTag: c93861d9-d667-49c7-b814-802bb66a6c3c
+		summarizeBy: none
+		sourceColumn: CORPORATE_UNIT_OWNED_RETAIL_PRICE
+
+		annotation SummarizationSetBy = Automatic
+
+	column MSRP
+		dataType: double
+		lineageTag: 8b0f2a29-8322-49a9-af90-2b4cfaae5aca
+		summarizeBy: sum
+		sourceColumn: MSRP
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column COST
+		dataType: double
+		lineageTag: 8c9fe009-64c5-41f1-adda-b957cca773b1
+		summarizeBy: none
+		sourceColumn: COST
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PRODUCT_SEASON
+		dataType: string
+		lineageTag: 28fdbb55-a305-4008-a115-854f6befeb26
+		summarizeBy: none
+		sourceColumn: PRODUCT_SEASON
+
+		annotation SummarizationSetBy = Automatic
+
+	column UNIT_OF_MEASURE
+		dataType: string
+		lineageTag: 3e703339-cb6c-410c-8413-4fbce0449041
+		summarizeBy: none
+		sourceColumn: UNIT_OF_MEASURE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPS_ITEM_STATUS
+		dataType: string
+		lineageTag: 0d170813-875e-4548-9592-4d228b9692e8
+		summarizeBy: none
+		sourceColumn: SPS_ITEM_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column _LOADED_AT
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f4100ec3-2e2f-4416-9220-2cbf7227ab95
+		summarizeBy: none
+		sourceColumn: _LOADED_AT
+
+		variation Variation
+			isDefault
+			relationship: 60a86e89-2acc-4c57-90c0-4bc9169dd2c0
+			defaultHierarchy: LocalDateTable_d2a19cf2-0cb0-44e5-bd67-87cd48efa7a7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_ITEMS = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("YTIGPIZ-WM74446.snowflakecomputing.com","compute_wh",[Implementation="2.0"]),
+				    DBT_SALES_AND_INVENTORY_Database = Source{[Name="DBT_SALES_AND_INVENTORY",Kind="Database"]}[Data],
+				    PUBLIC_Schema = DBT_SALES_AND_INVENTORY_Database{[Name="PUBLIC",Kind="Schema"]}[Data],
+				    DIM_ITEMS_Table = PUBLIC_Schema{[Name="DIM_ITEMS",Kind="Table"]}[Data]
+				in
+				    DIM_ITEMS_Table
+
+	annotation PBI_ResultType = Table
+

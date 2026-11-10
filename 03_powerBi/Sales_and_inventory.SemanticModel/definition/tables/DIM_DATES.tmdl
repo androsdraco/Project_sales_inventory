@@ -1,0 +1,159 @@
+table DIM_DATES
+	lineageTag: cbcdb50c-3902-488b-afa9-7545e98d9543
+	dataCategory: Time
+
+	column DATE_DAY
+		dataType: dateTime
+		isKey
+		formatString: Long Date
+		lineageTag: 7c66b8f1-16d4-432c-bb79-42bc3937bc76
+		summarizeBy: none
+		sourceColumn: DATE_DAY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column YEAR
+		dataType: double
+		lineageTag: a8a0bac1-9b54-4b11-8758-c3541536c2b9
+		summarizeBy: sum
+		sourceColumn: YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column QUARTER
+		dataType: double
+		lineageTag: aaba978f-b873-42d8-a42a-69b7179ac718
+		summarizeBy: sum
+		sourceColumn: QUARTER
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MONTH
+		dataType: double
+		lineageTag: 2eb75c06-ff58-4176-8baa-06e238dd313f
+		summarizeBy: sum
+		sourceColumn: MONTH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MONTH_NAME
+		dataType: string
+		lineageTag: c788304c-b91e-4a71-bbe9-b507c8f3aa8b
+		summarizeBy: none
+		sourceColumn: MONTH_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column WEEK_OF_YEAR
+		dataType: double
+		formatString: 0
+		lineageTag: 726456e6-7d1d-444b-bbd9-a2dc3f510896
+		summarizeBy: none
+		sourceColumn: WEEK_OF_YEAR
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column DAY_OF_WEEK_NUM
+		dataType: double
+		lineageTag: 86fc107f-49c4-4edc-9946-88da2e9e505b
+		summarizeBy: sum
+		sourceColumn: DAY_OF_WEEK_NUM
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DAY_OF_WEEK_NAME
+		dataType: string
+		lineageTag: 4b3bf15b-2d96-4f2e-9811-9138344baae3
+		summarizeBy: none
+		sourceColumn: DAY_OF_WEEK_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column DAY_OF_MONTH
+		dataType: double
+		lineageTag: 13d3609f-89ee-46b5-ab54-0190b6175ce8
+		summarizeBy: sum
+		sourceColumn: DAY_OF_MONTH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column WEEK_START
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f2b539a7-b26d-45d7-b0ca-7c901d34edce
+		summarizeBy: none
+		sourceColumn: WEEK_START
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MONTH_START
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b8d2a1ea-89d3-42eb-81bd-8b6fe00d946d
+		summarizeBy: none
+		sourceColumn: MONTH_START
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column QUARTER_START
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d23ac755-09a6-4235-8633-11bbd9e3cb07
+		summarizeBy: none
+		sourceColumn: QUARTER_START
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column YEAR_START
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ea380693-3a44-4a4f-ad02-c149d8feac9e
+		summarizeBy: none
+		sourceColumn: YEAR_START
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column IS_WEEKEND
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 825f8c67-d9d9-49c3-9bba-08eafdd1903c
+		summarizeBy: none
+		sourceColumn: IS_WEEKEND
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_DATES = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("YTIGPIZ-WM74446.snowflakecomputing.com","compute_wh",[Implementation="2.0"]),
+				    DBT_SALES_AND_INVENTORY_Database = Source{[Name="DBT_SALES_AND_INVENTORY",Kind="Database"]}[Data],
+				    PUBLIC_Schema = DBT_SALES_AND_INVENTORY_Database{[Name="PUBLIC",Kind="Schema"]}[Data],
+				    DIM_DATES_Table = PUBLIC_Schema{[Name="DIM_DATES",Kind="Table"]}[Data]
+				in
+				    DIM_DATES_Table
+
+	annotation PBI_ResultType = Table
+

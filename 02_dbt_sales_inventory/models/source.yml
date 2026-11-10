@@ -1,0 +1,429 @@
+version: 2
+
+sources:
+  - name: retail
+    description: ""
+    database: sales_and_inventory_data_for_retail_business_intelligence
+    schema: public
+    tables:
+      - name: activity
+        description: ""
+        columns:
+          - name: sps_customer_item_key
+            data_type: varchar
+            description: ""
+          - name: sps_retailer_name_key
+            data_type: varchar
+            description: ""
+          - name: sps_customer_location_key
+            data_type: varchar
+            description: ""
+          - name: sps_item_mapping_key
+            data_type: varchar
+            description: ""
+          - name: period_ending_date
+            data_type: number
+            description: ""
+          - name: gross_sales_units
+            data_type: varchar
+            description: ""
+          - name: gross_sales_cost
+            data_type: varchar
+            description: ""
+          - name: gross_sales_retail
+            data_type: varchar
+            description: ""
+          - name: gross_sales_margin_value
+            data_type: varchar
+            description: ""
+          - name: net_sales_units
+            data_type: number
+            description: ""
+          - name: net_sales_cost
+            data_type: varchar
+            description: ""
+          - name: net_sales_retail
+            data_type: number
+            description: ""
+          - name: net_sales_margin_value
+            data_type: varchar
+            description: ""
+          - name: customer_return_units
+            data_type: varchar
+            description: ""
+          - name: customer_return_cost
+            data_type: varchar
+            description: ""
+          - name: customer_return_retail
+            data_type: varchar
+            description: ""
+          - name: customer_return_margin_value
+            data_type: varchar
+            description: ""
+          - name: inventory_units
+            data_type: number
+            description: ""
+          - name: inventory_cost
+            data_type: varchar
+            description: ""
+          - name: inventory_retail
+            data_type: varchar
+            description: ""
+          - name: on_order_units
+            data_type: number
+            description: ""
+          - name: on_order_cost
+            data_type: varchar
+            description: ""
+          - name: on_order_retail
+            data_type: varchar
+            description: ""
+          - name: receipt_units
+            data_type: number
+            description: ""
+          - name: receipt_cost
+            data_type: varchar
+            description: ""
+          - name: receipt_retail
+            data_type: varchar
+            description: ""
+          - name: in_transit_units
+            data_type: number
+            description: ""
+          - name: in_transit_cost
+            data_type: varchar
+            description: ""
+          - name: in_transit_retail
+            data_type: varchar
+            description: ""
+          - name: return_to_vendor_units
+            data_type: varchar
+            description: ""
+          - name: return_to_vendor_cost
+            data_type: varchar
+            description: ""
+          - name: return_to_vendor_retail
+            data_type: varchar
+            description: ""
+          - name: inventory_adjustment_units
+            data_type: varchar
+            description: ""
+          - name: inventory_adjustment_cost
+            data_type: varchar
+            description: ""
+          - name: inventory_adjustment_retail
+            data_type: varchar
+            description: ""
+          - name: permanent_markdown_values
+            data_type: varchar
+            description: ""
+          - name: point_of_sale_markdown_values
+            data_type: varchar
+            description: ""
+          - name: total_markdown_values
+            data_type: varchar
+            description: ""
+          - name: corporate_unit_adjusted_cost
+            data_type: number
+            description: ""
+          - name: corporate_unit_acquired_cost
+            data_type: number
+            description: ""
+          - name: corporate_unit_owned_retail_price
+            data_type: number
+            description: ""
+          - name: insert_timestamp
+            data_type: timestamp_ntz
+            description: ""
+
+      - name: item
+        description: ""
+        columns:
+          - name: sps_retailer_name_key
+            data_type: varchar
+            description: ""
+          - name: sps_customer_item_key
+            data_type: varchar
+            description: ""
+          - name: sps_item_mapping_key
+            data_type: varchar
+            description: ""
+          - name: product_id
+            data_type: varchar
+            description: ""
+          - name: product_type_id
+            data_type: varchar
+            description: ""
+          - name: vendor_code
+            data_type: varchar
+            description: ""
+          - name: vendor_name
+            data_type: varchar
+            description: ""
+          - name: brand_code
+            data_type: varchar
+            description: ""
+          - name: brand_name
+            data_type: varchar
+            description: ""
+          - name: duns_number
+            data_type: varchar
+            description: ""
+          - name: division_code
+            data_type: varchar
+            description: ""
+          - name: division_name
+            data_type: varchar
+            description: ""
+          - name: major_department_code
+            data_type: varchar
+            description: ""
+          - name: major_department_name
+            data_type: varchar
+            description: ""
+          - name: department_code
+            data_type: varchar
+            description: ""
+          - name: department_name
+            data_type: varchar
+            description: ""
+          - name: sub_department_code
+            data_type: varchar
+            description: ""
+          - name: sub_department_name
+            data_type: varchar
+            description: ""
+          - name: major_class_code
+            data_type: varchar
+            description: ""
+          - name: major_class_name
+            data_type: varchar
+            description: ""
+          - name: class_code
+            data_type: varchar
+            description: ""
+          - name: class_name
+            data_type: varchar
+            description: ""
+          - name: sub_class_code
+            data_type: varchar
+            description: ""
+          - name: sub_class_name
+            data_type: varchar
+            description: ""
+          - name: category_code
+            data_type: varchar
+            description: ""
+          - name: category_name
+            data_type: varchar
+            description: ""
+          - name: sub_category_code
+            data_type: varchar
+            description: ""
+          - name: sub_category_name
+            data_type: varchar
+            description: ""
+          - name: product_group_code
+            data_type: varchar
+            description: ""
+          - name: product_group_name
+            data_type: varchar
+            description: ""
+          - name: gender
+            data_type: varchar
+            description: ""
+          - name: style_number
+            data_type: varchar
+            description: ""
+          - name: style_description
+            data_type: varchar
+            description: ""
+          - name: color_code
+            data_type: varchar
+            description: ""
+          - name: color_name
+            data_type: varchar
+            description: ""
+          - name: size_code
+            data_type: varchar
+            description: ""
+          - name: size_name
+            data_type: varchar
+            description: ""
+          - name: upc
+            data_type: varchar
+            description: ""
+          - name: sku
+            data_type: varchar
+            description: ""
+          - name: vendor_style_number
+            data_type: varchar
+            description: ""
+          - name: vendor_style_description
+            data_type: varchar
+            description: ""
+          - name: product_description
+            data_type: varchar
+            description: ""
+          - name: corporate_unit_acquired_cost
+            data_type: varchar
+            description: ""
+          - name: corporate_unit_adjusted_cost
+            data_type: varchar
+            description: ""
+          - name: corporate_unit_owned_retail_price
+            data_type: varchar
+            description: ""
+          - name: msrp
+            data_type: number
+            description: ""
+          - name: cost
+            data_type: number
+            description: ""
+          - name: replenishment_indicator
+            data_type: varchar
+            description: ""
+          - name: markdown_indicator
+            data_type: varchar
+            description: ""
+          - name: first_receipt_date
+            data_type: varchar
+            description: ""
+          - name: last_receipt_date
+            data_type: varchar
+            description: ""
+          - name: product_season
+            data_type: varchar
+            description: ""
+          - name: age
+            data_type: varchar
+            description: ""
+          - name: unit_of_measure
+            data_type: varchar
+            description: ""
+          - name: fedas_code
+            data_type: varchar
+            description: ""
+          - name: sps_item_status
+            data_type: varchar
+            description: ""
+          - name: insert_timestamp
+            data_type: timestamp_ntz
+            description: ""
+
+      - name: location
+        description: ""
+        columns:
+          - name: sps_retailer_name_key
+            data_type: varchar
+            description: ""
+          - name: sps_customer_location_key
+            data_type: varchar
+            description: ""
+          - name: location_id
+            data_type: varchar
+            description: ""
+          - name: retailer_name
+            data_type: varchar
+            description: ""
+          - name: store_number
+            data_type: varchar
+            description: ""
+          - name: store_name
+            data_type: varchar
+            description: ""
+          - name: address
+            data_type: varchar
+            description: ""
+          - name: address_2
+            data_type: varchar
+            description: ""
+          - name: city
+            data_type: varchar
+            description: ""
+          - name: state
+            data_type: varchar
+            description: ""
+          - name: postal_code
+            data_type: varchar
+            description: ""
+          - name: open_date
+            data_type: date
+            description: ""
+          - name: close_date
+            data_type: date
+            description: ""
+          - name: mall
+            data_type: varchar
+            description: ""
+          - name: sps_location_type
+            data_type: varchar
+            description: ""
+          - name: sps_country_code
+            data_type: varchar
+            description: ""
+          - name: sps_country
+            data_type: varchar
+            description: ""
+          - name: sps_latitude
+            data_type: number
+            description: ""
+          - name: sps_longitude
+            data_type: number
+            description: ""
+          - name: country
+            data_type: varchar
+            description: ""
+          - name: store_rank
+            data_type: varchar
+            description: ""
+          - name: store_classification
+            data_type: varchar
+            description: ""
+          - name: location_type
+            data_type: varchar
+            description: ""
+          - name: demographic
+            data_type: varchar
+            description: ""
+          - name: region
+            data_type: varchar
+            description: ""
+          - name: climate
+            data_type: varchar
+            description: ""
+          - name: comp_store_indicator
+            data_type: varchar
+            description: ""
+          - name: store_size
+            data_type: varchar
+            description: ""
+          - name: retailer_division
+            data_type: varchar
+            description: ""
+          - name: banner
+            data_type: varchar
+            description: ""
+          - name: gln
+            data_type: varchar
+            description: ""
+          - name: currency_code
+            data_type: varchar
+            description: ""
+          - name: insert_timestamp
+            data_type: timestamp_ntz
+            description: ""
+          - name: update_timestamp
+            data_type: varchar
+            description: ""
+
+      - name: retailer_metadata
+        description: ""
+        columns:
+          - name: sps_retailer_name_key
+            data_type: varchar
+            description: ""
+          - name: activitygrain
+            data_type: varchar
+            description: ""
+

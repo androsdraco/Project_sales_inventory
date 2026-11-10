@@ -1,0 +1,56 @@
+relationship 60a86e89-2acc-4c57-90c0-4bc9169dd2c0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DIM_ITEMS._LOADED_AT
+	toColumn: LocalDateTable_d2a19cf2-0cb0-44e5-bd67-87cd48efa7a7.Date
+
+relationship 7820a6ef-9d17-4079-8c9b-250803f32f93
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DIM_LOCATIONS.OPEN_DATE
+	toColumn: LocalDateTable_95d1d07a-e81c-4712-91f6-8a58a9e41afb.Date
+
+relationship 6d028495-5406-4d25-9e03-f3d00c790cb7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DIM_LOCATIONS.CLOSE_DATE
+	toColumn: LocalDateTable_eb6f20bb-cd2c-454e-b327-c58021e0d672.Date
+
+relationship c9b4c9c5-9098-4e05-8eb5-31c692afa858
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DIM_LOCATIONS._LOADED_AT
+	toColumn: LocalDateTable_d9b39662-3206-4490-ad07-66e6918fce83.Date
+
+relationship 06e1a265-03af-4e13-a84c-50000d174ffa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DIM_RETAILERS._LOADED_AT
+	toColumn: LocalDateTable_bf42de09-f531-408f-bb97-dd9f5a1be42c.Date
+
+relationship b7d72f90-ea6b-4bf5-9491-58069afede9b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FCT_RETAIL_ACTIVITY.PERIOD_WEEK_START
+	toColumn: LocalDateTable_c4b893cb-e634-40ec-9da5-bf97223916fd.Date
+
+relationship 30e3bac3-af4a-456e-9eaa-fe3003320d13
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FCT_RETAIL_ACTIVITY._LOADED_AT
+	toColumn: LocalDateTable_19bd30b5-4df9-4264-8c7f-f75cf2560fdf.Date
+
+relationship 1a3d30bf-c07a-4f65-9254-6712a3b2c0ee
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FCT_RETAIL_ACTIVITY._FACT_BUILT_AT
+	toColumn: LocalDateTable_9d7f38e2-c520-4178-9f33-68b957134456.Date
+
+relationship AutoDetected_e1c805db-3ca7-42b9-b62b-5bd36c8c434d
+	fromColumn: FCT_RETAIL_ACTIVITY.SPS_RETAILER_NAME_KEY
+	toColumn: DIM_RETAILERS.SPS_RETAILER_NAME_KEY
+
+relationship 0c3e0621-82d1-5509-9fa6-23c6d728e6ca
+	fromColumn: FCT_RETAIL_ACTIVITY.SPS_CUSTOMER_LOCATION_KEY
+	toColumn: DIM_LOCATIONS.SPS_CUSTOMER_LOCATION_KEY
+
+relationship 801cdbd1-f436-1433-bce1-9ac09c668423
+	fromColumn: FCT_RETAIL_ACTIVITY.SPS_ITEM_MAPPING_KEY
+	toColumn: DIM_ITEMS.SPS_ITEM_MAPPING_KEY
+
+relationship 4903ca9a-d6db-61ac-fda0-0ef3859429f0
+	fromColumn: FCT_RETAIL_ACTIVITY.PERIOD_ENDING_DATE
+	toColumn: DIM_DATES.DATE_DAY
+

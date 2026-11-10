@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "dda0afca06238c640a6b",
+  "position": {
+    "x": 694.28571428571433,
+    "y": 11.428571428571429,
+    "z": 9002,
+    "height": 75.714285714285722,
+    "width": 505.71428571428572,
+    "tabOrder": 9002
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Inventory Intelligence ",
+                    "textStyle": {
+                      "fontSize": "36pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
